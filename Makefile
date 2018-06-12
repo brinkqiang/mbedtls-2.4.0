@@ -65,7 +65,7 @@ NULL_ENTROPY_WARNING=\n$(WARNING_BORDER)$(NULL_ENTROPY_WARN_L1)$(NULL_ENTROPY_WA
 post_build:
 ifndef WINDOWS
 	# If NULL Entropy is configured, display an appropriate warning
-	-scripts/config.pl get MBEDTLS_TEST_NULL_ENTROPY && ([ $$? -eq 0 ]) && \
+	-perl scripts/config.pl get MBEDTLS_TEST_NULL_ENTROPY && ([ $$? -eq 0 ]) && \
 	    echo '$(NULL_ENTROPY_WARNING)'
 endif
 
