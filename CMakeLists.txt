@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 2.6)
 project("mbed TLS" C)
 
+LINK_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
 option(USE_PKCS11_HELPER_LIBRARY "Build mbed TLS with the pkcs11-helper library." OFF)
 option(ENABLE_ZLIB_SUPPORT "Build mbed TLS with zlib library." OFF)
 
